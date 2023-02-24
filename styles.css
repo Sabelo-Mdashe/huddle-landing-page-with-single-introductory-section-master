@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("./images/bg-desktop.svg");
+  background-color: hsl(257, 40%, 49%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3em 6em;
+  overflow-y: hidden;
+}
+
+main {
+  display: flex;
+  padding: 5em 0 0;
+}
+
+.content {
+  padding: 3em 4em;
+}
+
+h1 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+p {
+  color: white;
+  margin: 1.5em 0 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+button {
+  padding: 0.8em;
+  width: 35%;
+  border-radius: 2.5em;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: hsl(257, 40%, 49%);
+}
+
+.social_icons {
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+}
+
+.social_icons > img {
+  width: 2.5%;
+  align-self:center;
+}
+
+.social_icons > img:nth-child(3) {
+  width: 2.75%;
+}
+
+footer {
+  align-self: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ACTIVE STATES */
+button:hover {
+  cursor: pointer;
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+
+.social_icons > img:hover {
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 376px) {
+  body {
+    padding: 3em 3em;
+    width: fit-content;
+    overflow-y: auto;
+    background-image: none;
+  }
+
+  header > img {
+    width: 50%;
+  }
+
+  main {
+    flex-direction: column;
+    width: fit-content;
+    background-image: url('./images/bg-mobile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.7em;
+    align-self: center;
+  }
+
+  .content {
+    padding: 3em 6em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    width: 60%;
+    font-size: 1.5em;
+    align-self: center;
+  }
+
+  .social_icons {
+    justify-content: center;
+    margin-top: 2em 1em;
+  }
+
+  .social_icons > img {
+    width: 8%;
+  }
+  
+  .social_icons > img:nth-child(3) {
+    width: 8.75%;
+  }
+
+  footer {
+    position: relative;
+    margin-top: 1.5em;
+  }
+
+  .attribution {
+    font-size: 1.2em;
+  }
+
+  .attribution > a {
+    color: white;
+  }
+}
